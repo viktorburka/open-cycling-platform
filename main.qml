@@ -8,7 +8,7 @@ Rectangle {
     StackLayout {
         id: layout
         anchors.fill: parent
-//        currentIndex: 1
+        currentIndex: 1
         MainMenu {
             model: ListModel {
                 ListElement { name: "Workout" }
@@ -26,13 +26,16 @@ Rectangle {
             }
         }
         WorkoutSummary {
-            onStartWorkoutClicked: layout.currentIndex = 3
+            onStartWorkoutClicked: {
+                workoutController.startWorkout()
+                layout.currentIndex = 3
+            }
             onBackClicked: layout.currentIndex = 0
         }
         Settings {
         }
         Workout {
-
+            onEndWorkout: layout.currentIndex = 1
         }
     }
 }

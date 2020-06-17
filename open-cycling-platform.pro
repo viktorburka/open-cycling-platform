@@ -9,9 +9,13 @@ CONFIG += c++11
 DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
-        main.cpp
+        main.cpp \
+        workoutcontroller.cpp
 
 RESOURCES += qml.qrc
 
 # Default rules for deployment.
 !isEmpty(target.path): INSTALLS += target
+
+HEADERS += \
+    workoutcontroller.h
