@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>WorkoutSummary.qml</file>
+        <file>Workout.qml</file>
+        <file>MainMenu.qml</file>
+        <file>Settings.qml</file>
+        <file>BottomBar.qml</file>
+        <file>images/back.png</file>
+        <file>images/next.png</file>
+    </qresource>
+</RCC>
