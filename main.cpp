@@ -4,6 +4,7 @@
 #include <QQmlContext>
 
 #include "workoutcontroller.h"
+#include "phonecommunication.h"
 
 int main(int argc, char *argv[])
 {
@@ -12,6 +13,7 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     WorkoutController workoutController;
+    PhoneCommunication comm;
 
     QQuickView view;
     view.rootContext()->setContextProperty("workoutController", &workoutController);
@@ -21,6 +23,8 @@ int main(int argc, char *argv[])
         return -1;
     view.setResizeMode(QQuickView::SizeRootObjectToView);
     view.show();
+
+    comm.connect();
 
     return app.exec();
 }

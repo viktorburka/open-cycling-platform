@@ -33,6 +33,7 @@ public:
     }
 
     Q_INVOKABLE void startWorkout();
+    Q_INVOKABLE void stopWorkout();
 
 signals:
     void elapsedTimeChanged();

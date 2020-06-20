@@ -35,7 +35,10 @@ Rectangle {
         Settings {
         }
         Workout {
-            onEndWorkout: layout.currentIndex = 1
+            onEndWorkout: {
+                workoutController.stopWorkout()
+                layout.currentIndex = 1
+            }
         }
     }
 }

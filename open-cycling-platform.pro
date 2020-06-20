@@ -1,4 +1,4 @@
-QT += quick
+QT += quick bluetooth
 
 CONFIG += c++11
 
@@ -10,12 +10,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
+        phonecommunication.cpp \
+        settings.cpp \
         workoutcontroller.cpp
 
 RESOURCES += qml.qrc
 
 # Default rules for deployment.
+linux {
+    target.path = /home/pi/
+}
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    phonecommunication.h \
+    settings.h \
     workoutcontroller.h

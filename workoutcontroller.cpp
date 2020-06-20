@@ -18,6 +18,11 @@ void WorkoutController::startWorkout()
     m_ticker->start(1000);
 }
 
+void WorkoutController::stopWorkout()
+{
+    m_ticker->stop();
+}
+
 void WorkoutController::updateValues()
 {
     QTime ct = QTime::currentTime();
